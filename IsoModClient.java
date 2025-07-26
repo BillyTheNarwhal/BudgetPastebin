@@ -5,9 +5,6 @@ import com.billythenarwhal.networking.ModPackets;
 import com.billythenarwhal.satin.RainbowWitherEntityRenderer;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
-import dev.doctor4t.arsenal.client.render.item.AnchorbladeDynamicItemRenderer;
-import dev.doctor4t.arsenal.client.render.item.ScytheDynamicItemRenderer;
-import dev.doctor4t.arsenal.index.ArsenalItems;
 import ladysnake.satin.api.event.EntitiesPreRenderCallback;
 import ladysnake.satin.api.event.ShaderEffectRenderCallback;
 import ladysnake.satin.api.managed.ManagedCoreShader;
@@ -19,7 +16,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin;
 import net.fabricmc.fabric.api.client.rendereregistry.v1.EntityRendererRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.BuiltinItemRendererRegistry;
 import net.fabricmc.fabric.api.event.client.ClientTickCallback;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.MinecraftClient;
@@ -54,8 +50,6 @@ public class IsoModClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BuiltinItemRendererRegistry.INSTANCE.register(ModItems.HIKA_SCYTHE, new ScytheDynamicItemRenderer());
-
         ModPackets.registerS2CPackets();
 
         FabricDefaultAttributeRegistry.register(RAINBOW_WITHER, WitherEntity.createWitherAttributes());
