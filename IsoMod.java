@@ -1,14 +1,9 @@
 package com.billythenarwhal;
 
-import com.billythenarwhal.command.*;
 import com.billythenarwhal.effect.ModEffects;
 import com.billythenarwhal.item.ModItems;
 import com.billythenarwhal.item.ModToolMaterials;
-import dev.doctor4t.arsenal.item.AnchorbladeItem;
 import net.fabricmc.api.ModInitializer;
-
-import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
-import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
