@@ -60,13 +60,7 @@ public class IsoMod implements ModInitializer {
 		ModEffects.registerEffects();
 
 
-		registerCommands();
 
-		ServerTickEvents.END_SERVER_TICK.register((tick) -> {
-			CocainerUtils.stalkTick(tick);
-
-
-		});
 
 
 		LOGGER.info("Hello Fabric world!");
@@ -82,14 +76,7 @@ public class IsoMod implements ModInitializer {
 
 
 
-	private void registerCommands(){
-		CommandRegistrationCallback.EVENT.register((dispatcher, registryAccess, environment) -> {
-			EnableBabyModeCommand.register(dispatcher, environment.dedicated);
-			BabyModeUnAbortionCommand.register(dispatcher, environment.dedicated);
-			CocainerCommands.register(dispatcher, environment.dedicated);
-			EnableDealerModeCommand.register(dispatcher, environment.dedicated);
 
-		});
 
 
 
